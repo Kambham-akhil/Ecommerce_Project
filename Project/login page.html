@@ -1,0 +1,159 @@
+<html>
+<head>
+	<title>FORM</title>
+	<style>
+		body{
+			margin: 0;padding: 0;background-image: url(images/sty.JPG);background-position: center;background-size: cover;height: 400px;width: 500px;
+
+		}
+
+		.form 
+		{
+			position: absolute;
+			top: 50px;
+			left: calc(50% - 50px);
+			width: 50px;
+			background: rgba(300, 300,300, 0.8);
+			border-radius: 50%;
+		}
+
+		
+		.task{
+			width: 330px;height: 390px;background: whitesmoke;top: 150px;right: 600px;position: absolute;
+			transform: translate(-50px,-50px);
+			box-sizing: border-box;
+			padding: 40px 30px;
+			border-radius: 10px;
+		}
+		h1{
+			margin: 0;
+			padding: 0 0 20px;
+			text-align: center;
+			front-size: 22px;
+		}
+		.task h1{
+			background-color: red;
+			borber-radius: 6px;
+			margin: 0;
+			padding: 10px;
+			font-weight: bold;
+		}
+		.task input{
+			width: 280px;
+			margin-bottom: 18px;
+			border-radius: 4px;
+		}
+		.task input[type="text"],input[type="password"]
+		{
+			border: none;
+			border-bottom: 2px solid blue;
+			background: transparent;
+			color:black	;
+			outline: none;
+			height: 20px;
+			font-size: 16px;
+		} 
+		.task input[type="submit"]
+		{
+			border: none;
+			outline: none;
+			height: 30px;
+			color: wheat;
+			background: black;
+			font-size: 17px;
+			border-radius: 20px;
+		}
+		.task input[type="submit"]:hover
+		{
+
+			cursor: pointer;
+			background:pink ;
+			color: black;
+			font-weight: bold;
+		}
+		.task a{
+			text-decoration: none;
+			font-size: 14px;
+			line-height: 18px;
+			color: darkblue;
+		} 
+		.task a:hoverP{
+			color: white;
+		}
+			.show{
+			position: absolute;
+			right: 13px;
+			font-size: 12px;
+			font-weight: 700;
+			color: #222;
+			cursor: pointer;
+			display: none;
+			font-family: 'Montserrat',sans-serif;		
+		}
+		.Password:valid ~ .show{
+			display: block;
+		}
+		.pass{
+			text-align: left;
+			margin: 3px 0;
+		}
+		.pass a{
+			colour: white;
+			font-family: 'poppins',sans-serif;
+			text-decoration: none;
+
+		}
+		.pass:hover a{
+			text-decoration: underline;
+		}
+
+	</style>
+	</head>	
+<body>
+
+	<div class="login-wrapper">
+		<form action="" class="form">
+			<img src="#" alt="">
+		</form>
+	</div>
+	<div class="Task">
+
+		<h1><i class="fa fa-user-circle"></i>Login Here</h1>
+		<form>
+		
+			<p>UserId</p>
+		    <input type="text"required placeholder="Enter Email Id">
+		    <p>Password</p>
+		    <span class="show">SHOW</span>
+			<input type="password" class="Password" required placeholder="Enter password">
+			
+			<div class="pass">
+
+				<a href="#">Forgot Password?</a><br></br>
+			</div>	
+			<input type="submit" name="" value="Login">
+			<span>Not a member?</span>
+			<span><a href="file:///D:/css/signup.html">Sigup Now</a></span>
+		</form>	
+
+			
+
+		
+	</div>
+	<script>
+		const pass_field=document.querySelector('.password');
+		const show_btn=document.querySelector('.show');
+		pass_field.addEventListener('click',function(){
+			if(pass_field.type==="password"){
+				pass_field.type="text";
+				show_btn.style.color="#3498db";
+				show_btn.textContent="HIDE";
+			}else{
+				pass_field.type="password";
+				show_btn.style.color="#222";
+				show_btn.textContent="SHOW";
+			}
+			}
+	</script>>	
+</body>
+</html>
